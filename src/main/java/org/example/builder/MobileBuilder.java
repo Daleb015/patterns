@@ -2,40 +2,37 @@ package org.example.builder;
 
 public abstract class MobileBuilder {
 
-    Mobile mobile;
+  Mobile mobile;
 
-    public Mobile getMobile() {
-        return mobile;
-    }
+  public Mobile getMobile() {
+    return mobile;
+  }
 
-    public void setMobile(Mobile mobile) {
-        this.mobile = mobile;
-    }
+  public void setMobile(Mobile mobile) {
+    this.mobile = mobile;
+  }
 
-    public abstract void createMemory();
+  public abstract void createMemory();
 
-    public abstract void createBattery();
+  public abstract void createBattery();
 
-    public abstract void createWireless();
+  public abstract void createWireless();
 
-    public abstract void createScreen();
+  public abstract void createScreen();
 
-    public abstract void createMetalCase();
+  public abstract void createMetalCase();
 
-    public final Mobile buildMobile(){
+  public final Mobile buildMobile() {
+    Mobile mob = new Mobile();
 
-        Mobile mob = new Mobile();
+    setMobile(mob);
 
-        setMobile(mob);
+    createMemory();
+    createBattery();
+    createWireless();
+    createScreen();
+    createMetalCase();
 
-        createMemory();
-        createBattery();
-        createWireless();
-        createScreen();
-        createMetalCase();
-
-        return mob;
-
-    }
-
+    return mob;
+  }
 }

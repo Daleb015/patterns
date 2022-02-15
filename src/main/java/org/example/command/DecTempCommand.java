@@ -2,16 +2,15 @@ package org.example.command;
 
 public class DecTempCommand implements ICommandAC {
 
-    AC ac;
+  AC ac;
 
-    public DecTempCommand(AC ac) {
-        this.ac = ac;
-    }
+  public DecTempCommand(AC ac) {
+    this.ac = ac;
+  }
 
-    @Override
-    public void execute() {
-
-        System.out.println("Decrease on the AC");
-        ac.decTemp();
-    }
+  @Override
+  public void execute() {
+    System.out.println("Decrease on the AC");
+    ac.decTemp();
+  }
 }

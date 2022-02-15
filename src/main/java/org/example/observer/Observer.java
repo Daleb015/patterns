@@ -1,5 +1,5 @@
 package org.example.observer;
 
 public interface Observer {
-    void update(String avail);
+  void update(String avail);
 }
